@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pyrebase4
+openai-whisper
+googletrans==4.0.0-rc1
+python-multipart
+ffmpeg-python
+pydantic
+streamlit
+requests
+pytubefix
+
