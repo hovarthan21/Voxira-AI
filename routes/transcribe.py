@@ -5,12 +5,10 @@ from models.whisper_model import transcribe_audio
 from utils.firebase import db
 from datetime import datetime
 
-# Add ffmpeg to PATH manually
 os.environ["PATH"] += os.pathsep + r"C:\Users\Hovarthanvishnu\Downloads\ffmpeg-7.1.1-essentials_build\ffmpeg-7.1.1-essentials_build\bin"
 
 router = APIRouter()
 
-# Load the Whisper model
 model = whisper.load_model("medium") 
 
 UPLOAD_DIR = "uploads"
@@ -19,16 +17,12 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 @router.post("/")
 async def transcribe(file: UploadFile = File(...), user_id: str = Form(...)):
     try:
-        # Save uploaded file
         file_location = os.path.join(UPLOAD_DIR, file.filename)
         with open(file_location, "wb") as f:
             f.write(await file.read())
 
-       
-        # Transcribe using Whisper
+    
         transcript = transcribe_audio(file_location)
-
-        # Save to Firebase History
         timestamp = datetime.now().isoformat()
         history_data = {
             "file_name": file.filename,
