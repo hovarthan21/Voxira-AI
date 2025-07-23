@@ -1,0 +1,17 @@
+import pyrebase
+
+firebase_config = {
+  "apiKey": "AIzaSyBQ4QBpVGKb9Pe5eTBUNMK-YVsS54Y_T2c",
+  "authDomain": "you-tube-9b81a.firebaseapp.com",
+  "projectId": "you-tube-9b81a",
+  "storageBucket": "you-tube-9b81a.appspot.com",
+  "messagingSenderId": "828432195461",
+  "appId": "1:828432195461:web:e0eac281947f9a09fa6eec",
+  "measurementId": "G-0L37SYLVRS",
+  "databaseURL": "https://you-tube-9b81a-default-rtdb.firebaseio.com/"
+}
+
+firebase = pyrebase.initialize_app(firebase_config)
+auth = firebase.auth()
+db = firebase.database()
+storage = firebase.storage()
