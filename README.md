@@ -8,6 +8,10 @@ Voxira AI is a cutting-edge web application that transcribes audio/video files i
 
 ---
 
+## Video
+
+[▶ Voxira AI ](https://drive.google.com/file/d/1x2yVwWL6I4SGdcaQYOLvJeLBNbtR3kJT/view?usp=sharing)
+
 ##  Features
 
 -  **Upload or Paste YouTube URL** – Accepts `.mp3`, `.wav`, `.mp4`, `.m4a` or direct YouTube links.
